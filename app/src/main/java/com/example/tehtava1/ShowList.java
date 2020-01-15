@@ -23,7 +23,14 @@ public class ShowList extends AppCompatActivity {
 
         Bundle extra = getIntent().getBundleExtra("extra");
         ArrayList<String> lista = (ArrayList<String>) extra.getSerializable("objects");
-        textView.setText(lista.toString());
+
+        textView.setText("Lista:\n");
+        for (int j = 0; j < lista.size(); j++){
+            textView.append(lista.get(j) + "\n");
+        }
+        if (lista.size() < 1) {
+            textView.setText("Lista tyhjä");
+        }
 
         this.back_button.setOnClickListener(new View.OnClickListener() {
             @Override
