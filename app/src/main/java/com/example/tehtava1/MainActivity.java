@@ -71,7 +71,7 @@ public Context context;
                     toast = Toast.makeText(context, "Lisäys epäonnistui :( (min 3 max 15)", duration);
                 }
                 toast.show();
-                textView.setText(content);
+                //textView.setText(content);
 
             }
         });
